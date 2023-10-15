@@ -19,13 +19,13 @@ export default function NewOrderPage({ user, setUser }) {
   // The empty dependency array causes the effect
   // to run ONLY after the FIRST render
   useEffect(function() {
-    async function getItems() {
-      const items = await itemsAPI.getAll();
+    async function getArticles() {
+      const items = await articlesAPI.getAll();
       categoriesRef.current = [...new Set(items.map(item => item.category.name))];
       setMenuItems(items);
       setActiveCat(categoriesRef.current[0]);
     }
-    getItems();
+    getArticles();
 
     // Load cart (a cart is the unpaid order for the logged in user)
     async function getCart() {
