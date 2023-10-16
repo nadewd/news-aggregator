@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import ArticleCard from '../../components/ArticleCard/ArticleCard'
+import ArticleCard from '../ArticleCard/ArticleCard'
 
-export default function ArticlesCardList() {
+export default function ArticlesList() {
     const [articles, setArticles] = useState([])
 
     useEffect(() => {
