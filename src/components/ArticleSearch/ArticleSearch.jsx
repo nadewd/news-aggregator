@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import './ArticleSearch.css';
 import axios from "axios"
 
@@ -13,16 +13,14 @@ export default function ArticleSearch({ articles, setArticles, user }) {
     };
     
     const handleChange = (value) => {
-        console.log("value", value)
         setInput(value)
         getArticles(value)
     }
 
-
     return (
         <div className="SearchArea">
+            Keyword Search: 
             <input
-                placeholder="Use Keywords to Search For Articles"
                 value={input}
                 onChange={(evt) => handleChange(evt.target.value)}
                 />

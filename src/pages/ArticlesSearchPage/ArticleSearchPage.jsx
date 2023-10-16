@@ -11,7 +11,7 @@ export default function ArticleSearchPage({ user, setUser }) {
 
     useEffect(function() {
         const getArticles = async (category) => {
-        const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&${category}=sports&apiKey=${newsAPIKey}`)
+        const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=General&apiKey=${newsAPIKey}`)
         setArticles(res.data.articles);
         console.log(res)
         }

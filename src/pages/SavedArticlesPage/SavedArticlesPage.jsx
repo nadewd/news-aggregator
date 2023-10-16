@@ -9,7 +9,6 @@ export default function SavedArticlesPage() {
     useEffect(function () {
         async function getSaved() {
             const savedArticles = await articlesAPI.getAll()
-            console.log(savedArticles)
             setSaved(savedArticles)
         }
         getSaved();

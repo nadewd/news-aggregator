@@ -3,7 +3,6 @@ const Article = require('../../models/Article');
 module.exports = {
     index,
     create,
-    delete: deleteSavedArticle
 };
 
 async function index(req, res) {
@@ -11,16 +10,6 @@ async function index(req, res) {
     console.log(saved)
     res.json( saved );
 }
-
-async function deleteSavedArticle() {
-   try {
-    const deleteSaved = await Article.findOneAndDelete({"_id": req.params.id});
-    res.json(deleteSaved);
-   } catch (err) {
-    console.log(err)
-    res.status(400).json(err)
-   }
-}    
 
 async function create(req, res) {
     try {

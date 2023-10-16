@@ -3,7 +3,6 @@ import ArticleCard from '../ArticleCard/ArticleCard'
 export default function ArticlesList({ articles }) {
 
     const topArticles = articles.map((article, id) => (
-
         <ArticleCard 
             article={article}
             title={article.title}
@@ -13,7 +12,7 @@ export default function ArticlesList({ articles }) {
             urlToImage={article.urlToImage}
             key={id}
                          
-        />
+            />
     ));
 
     return (
