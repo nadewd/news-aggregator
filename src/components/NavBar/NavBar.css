@@ -1,0 +1,14 @@
+.articles {
+    color: white;
+    font-weight: strong;
+}
+
+span {
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+}
+
+.LogOut {
+    color: white;
+}

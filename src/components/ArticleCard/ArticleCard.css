@@ -1,15 +1,17 @@
-.news-app {
+.article-card {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  padding: 20px 20px 20px 20px;
 }
 
-.news-item {
-  width: 500px;
+.article-item {
+  width: 80%;
   padding: 20px;
   border: 1px solid;
   margin-bottom: 20px;
 }
 
-.news-img {
-  width: 400px;
+.article-img {
+  width: 300px;
 }
