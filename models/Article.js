@@ -2,53 +2,37 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const articleSchema = new Schema({
-  keyword: {
+  source: {
     type: String,
-    required: true,
-    minlength: 2,
-    maxlength: 50,
+    required: true
+  },
+  author: {
+    type: String,
+    required: true
   },
   title: {
     type: String,
     required: true,
-    minlength: 2,
-    maxlength: 150,
   },
-  text: {
-    type: String,
-    required: true,
-    minlength: 2,
-  },
-  date: {
+  description: {
     type: String,
     required: true,
   },
-  source: {
+  url: {
     type: String,
     required: true,
-    minlength: 2,
   },
-  link: {
+  urlToImage: {
     type: String,
     required: true,
-    validate: {
-      validator(v) {
-        return /^(https?):\/\/(www\.)?[\w-@:%+~#=]+[.][.\w/\-?#=&~@:()!$+%]*$/gm.test(
-          v
-        );
-      },
-    },
   },
-  image: {
+  publishedAt: {
     type: String,
     required: true,
-    validate: {
-      validator(v) {
-        return /^(https?):\/\/(www\.)?[\w-@:%+~#=]+[.][.\w/\-?#=&~@:()!$+%]*$/gm.test(
-          v
-        );
-      },
-    },
+  },
+  content: {
+    type: String,
+    required: true,
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,

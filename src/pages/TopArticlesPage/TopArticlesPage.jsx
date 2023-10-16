@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import './NewOrderPage.css';
+import { useState, useRef } from 'react';
+import './TopArticlesPage.css';
 import { Link, useNavigate } from 'react-router-dom';
 import CategoryList from '../../components/CategoryList/CategoryList';
-import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import ArticlesList from '../../components/ArticlesCardList/ArticlesList';
 
 export default function TopArticlesPage({ user, setUser }) {
   const [articles, setArticles] = useState([]);
@@ -19,7 +19,6 @@ export default function TopArticlesPage({ user, setUser }) {
           setActiveCat={setActiveCat}
         />
         <Link to="/saved-articles" className="button btn-sm">SAVED ARTICLES</Link>
-        <UserLogOut user={user} setUser={setUser} />
       </aside>
       <ArticlesList
         articles={articles.filter(a => a.category.name === activeCat)}

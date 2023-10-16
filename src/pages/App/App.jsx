@@ -5,7 +5,7 @@ import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
-import ArticlesList from '../../components/ArticlesCardList/ArticlesList'
+import TopArticlesPage from '../TopArticlesPage/TopArticlesPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -17,7 +17,7 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* Route components in here */}
-              <Route path="/articles" element={<ArticlesList />} />
+              <Route path="/articles" element={<TopArticlesPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} />
             </Routes>
           </>
