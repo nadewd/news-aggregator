@@ -4,16 +4,17 @@ import ArticleCard from '../ArticleCard/ArticleCard'
 
 export default function ArticlesList() {
     const [articles, setArticles] = useState([])
+    const newsAPIKey = process.env.REACT_APP_NEWSAPI_KEY
 
     useEffect(() => {
         const getArticles = async () => {
-            const response = await axios.get(`https://newsapi.org/v2/everything?q=football&apiKey=2f7a9f9c275843cc87bf3b72ba9924ba`)
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${newsAPIKey}`)
             setArticles(response.data.articles)
             console.log(response)
         }
 
         getArticles();
-    }, [])
+    })
     return (
         <div>
             {articles.map(article => {
@@ -29,3 +30,5 @@ export default function ArticlesList() {
         </div>
     )
 }
+
+
