@@ -5,13 +5,13 @@ I created this news aggregator application to provide users with a quick snapsho
 ## Screenshots
 
 Home Page
-![Home Page]()
+![Home Page](imgs/ArticleSearchPage.png)
 
 Saved Articles Page
-![Saved Articles Page]()
+![Saved Articles Page](imgs/SavedArticlePage.png)
 
 Auth Page
-![Auth Page]()
+![Auth Page](imgs/AuthPage.png)
 
 ## Technologies Used
 - HTML
