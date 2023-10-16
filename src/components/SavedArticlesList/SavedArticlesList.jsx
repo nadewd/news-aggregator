@@ -7,7 +7,7 @@ export default function SavedArticlesList({ saved }) {
 
         <ArticleCard 
             title={article.title}
-            source={article.source.name}
+            source={article.source}
             author={article.author}
             date={article.date}
             description={article.description}

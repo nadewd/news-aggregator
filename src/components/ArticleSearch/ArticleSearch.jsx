@@ -19,7 +19,7 @@ export default function ArticleSearch({ articles, setArticles, user }) {
 
     return (
         <div className="SearchArea">
-            Keyword Search: 
+            Keyword Search: &nbsp;
             <input
                 value={input}
                 onChange={(evt) => handleChange(evt.target.value)}
