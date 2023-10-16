@@ -2,7 +2,7 @@ import { useState } from "react";
 import './ArticleSearch.css';
 import axios from "axios"
 
-export default function ArticleSearch({ articles, setArticles, user }) {
+export default function ArticleSearch({ setArticles }) {
     const [input, setInput] = useState("");
     const newsAPIKey = process.env.REACT_APP_NEWSAPI_KEY
 
