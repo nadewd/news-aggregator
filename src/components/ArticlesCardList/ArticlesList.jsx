@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
 import ArticleCard from '../ArticleCard/ArticleCard'
 
-export default function ArticlesList() {
-    const [articles, setArticles] = useState([])
+export default function ArticlesList(articles, setArticles) {
     const newsAPIKey = process.env.REACT_APP_NEWSAPI_KEY
 
     useEffect(() => {
