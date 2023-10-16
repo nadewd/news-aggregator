@@ -9,10 +9,6 @@ export async function getAll() {
     return await sendRequest(BASE_URL)
 }
 
-// export async function deleteEvent(result) {
-//     return async function (`${BASE_URL}/${id}`, "DELETE", { result })
-// }
-
 // This function is never actually used in SEI CAFE,
 // it's only provided here to remind you to follow
 // RESTful routing, etc.
